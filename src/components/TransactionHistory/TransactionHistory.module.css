@@ -1,0 +1,23 @@
+.table {
+  border: 1px solid #ccc; /* граница всей таблицы */
+  border-collapse: collapse;
+
+  /* смежные ячейки имеют отдельные границы, которые разделяются пространством(свойства border-spacing) */
+  /* border-collapse: separate; 
+  border-spacing: 3px; */
+}
+tr {
+  border: 1px solid #ccc; /* границы между строками */
+}
+th {
+  background-color: teal;
+  color: #fff;
+}
+td,
+th {
+  border: 1px solid #ccc; /* границы между столбцами */
+  padding: 10px 50px;
+}
+.tableRow:nth-child(2n) {
+  background-color: #ebebeb;
+}

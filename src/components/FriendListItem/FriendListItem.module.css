@@ -1,0 +1,37 @@
+.paddingForEl {
+  box-sizing: content-box;
+  padding: 5px;
+}
+.item {
+  box-shadow: 0 0 5px #1d1c1c;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  margin: 10px;
+}
+.status {
+  composes: paddingForEl;
+  margin: 0 10px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+}
+.statusOn {
+  background-color: green;
+}
+.statusOff {
+  background-color: red;
+}
+.avatarSel {
+  composes: paddingForEl;
+  display: inline-block;
+  border-radius: 14px;
+  width: 100px;
+}
+.nameSel {
+  composes: paddingForEl;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+}
