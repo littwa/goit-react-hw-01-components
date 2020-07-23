@@ -26,6 +26,7 @@ Statistics.defaultProps = {
 
 Statistics.propTypes = {
   title: PropTypes.string,
+  stats: PropTypes.array,
 };
 
 console.log(RandomColor());

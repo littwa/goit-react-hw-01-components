@@ -2,11 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import { item, avatarSel, nameSel, status, statusOn, statusOff } from "./FriendListItem.module.css";
 
-function FriendListItem({ id, avatar, name, isOnline }) {
+function FriendListItem(prop) {
+  let { avatar, name, isOnline } = prop;
+
   let statusOnline = [status, isOnline ? statusOn : statusOff];
 
   return (
-    <li key={id} className={item}>
+    <li className={item}>
       <span className={statusOnline.join(" ")}></span>
       <img className={avatarSel} src={avatar} alt={name} width="48" />
       <p className={nameSel}>{name}</p>
