@@ -5,11 +5,9 @@ import { item, avatarSel, nameSel, status, statusOn, statusOff } from "./FriendL
 function FriendListItem(prop) {
   let { avatar, name, isOnline } = prop;
 
-  let statusOnline = [status, isOnline ? statusOn : statusOff];
-
   return (
     <li className={item}>
-      <span className={statusOnline.join(" ")}></span>
+      <span className={[status, isOnline ? statusOn : statusOff].join(" ")}></span>
       <img className={avatarSel} src={avatar} alt={name} width="48" />
       <p className={nameSel}>{name}</p>
     </li>

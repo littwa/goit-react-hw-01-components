@@ -1,9 +1,7 @@
 import React from "react";
-
 import User from "./User/User";
 import Statistics from "./Statistics/Statistics";
 import FriendList from "./FriendList/FriendList";
-import FriendListItem from "./FriendListItem/FriendListItem";
 import TransactionHistory from "./TransactionHistory/TransactionHistory";
 import userJson from "../data/user.json";
 import stats from "../data/statistical-data.json";
@@ -25,13 +23,7 @@ export default function App() {
       />
       <h1>----------Task 2-----------</h1>
       <Statistics title={"Upload stats"} stats={stats} />
-      {/* <h1>----------Task 3-----------</h1>
-      <FriendList>
-        {friends.map((f) => (
-          <FriendListItem {...f} key={f.id} />
-        ))}
-      </FriendList> */}
-      <h1>----------Task 3-V2--------</h1>
+      <h1>----------Task 3-----------</h1>
       <FriendList friends={friends}></FriendList>
       <h1>----------Task 4-----------</h1>
       <TransactionHistory items={transactions}></TransactionHistory>

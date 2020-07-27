@@ -1,19 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { statistics, label, percentage, item, titlesel, statlist } from "./Statistics.module.css";
-import RandomColor from "./RandomColor";
+import { statistics, titlesel, statlist } from "./Statistics.module.css";
+import StatListItem from "../StatListItem/StatListItem";
 
 export default function Statistics({ title, stats }) {
   return (
     <section className={statistics}>
       {title && <h2 className={titlesel}>{title}</h2>}
-
       <ul className={statlist}>
         {stats.map((s) => (
-          <li key={s.id} style={{ backgroundColor: `${RandomColor()}` }} className={item}>
-            <span className={label}>{s.label}</span>
-            <span className={percentage}>{s.percentage}%</span>
-          </li>
+          <StatListItem statLabel={s.label} statPercentage={s.percentage} key={s.id} />
         ))}
       </ul>
     </section>
@@ -28,5 +24,3 @@ Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.array,
 };
-
-console.log(RandomColor());
